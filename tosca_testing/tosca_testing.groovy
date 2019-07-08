@@ -1,4 +1,4 @@
-viod call(){
+void call(){
 echo 'Tosca testing is started..'
 stage('Tosca_Test'){
     node {
