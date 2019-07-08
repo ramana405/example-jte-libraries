@@ -1,4 +1,4 @@
-viod call(){
+void call(){
 echo "Starting Static Code Analysis"       
 stage('SCA_Sonar'){
        node{
