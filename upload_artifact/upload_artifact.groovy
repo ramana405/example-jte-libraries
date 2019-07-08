@@ -1,6 +1,6 @@
 void call(){
 
-ehco "Uploading Artifacts to S3 bucket"
+echo "Uploading Artifacts to S3 bucket"
 stage("Upload_Artifact"){
     node{
         sleep(5)
