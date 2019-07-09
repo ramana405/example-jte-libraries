@@ -6,7 +6,7 @@ stage('build') {
               parameters {
                      string(defaultValue: "TEST", description: 'What environment?', name: 'userFlag')
               }
-              sh "echo ${params.userFlag}"
+              echo "${params.userFlag}"
               //bat '"C:\\ProgramData\\chocolatey\\lib\\NuGet.CommandLine\\tools\\nuget.exe" restore DancingGoat.sln'
               //bat "\"${tool 'MSBuild'}\" DancingGoat.sln /p:Configuration=Release /p:Platform=\"Any CPU\" /P:DeployOnBuild=true"
        }
