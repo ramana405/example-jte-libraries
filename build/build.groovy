@@ -1,9 +1,8 @@
 import static Constants.*
 void call() {
 echo "starting msbuild"
-class Constants {
-    static final MYCONSTANT
-}       
+static final MYCONSTANT
+       
 stage('build') {
        node {
               echo "Code build is in progress"
