@@ -1,7 +1,7 @@
-import static Constants.*
+//import static Constants.*
 void call() {
 echo "starting msbuild"
-static final MYCONSTANT
+//static final MYCONSTANT
        
 stage('build') {
        node {
@@ -11,7 +11,7 @@ stage('build') {
   		              string(name: 'Solution_file', defaultValue: 'undefined')
   	              ])
               ])
-              MYCONSTANT = "${params.Solution_file}"    
+              //MYCONSTANT = "${params.Solution_file}"    
               println "####Printing parameter:"
               echo "mybranch = ${params.Solution_file}"
               echo "${env.JOB_URL}"
