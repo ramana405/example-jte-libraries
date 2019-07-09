@@ -11,7 +11,7 @@ stage('build') {
               ])
               println "Hello from the shebang line"
               println "####Printing parameter:"
-              echo "mybranch = ${mybranch}"
+              echo "mybranch = ${params.mybranch}"
               echo "${params.Solution}"
               echo "${env.JOB_URL}"
               //bat '"C:\\ProgramData\\chocolatey\\lib\\NuGet.CommandLine\\tools\\nuget.exe" restore DancingGoat.sln'
