@@ -1,4 +1,4 @@
-import static Constants.*
+//import static Constants.*
 void call(){
 load "build/build.groovy"
 echo "Starting Static Code Analysis"       
