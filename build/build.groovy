@@ -4,8 +4,14 @@ stage('build') {
        node {
               echo "Code build is in progress" 
               input id: 'Abc', message: 'Enter the solution file name?', ok: 'Continue', parameters: [string(defaultValue: 'DancingGoat.sln', description: '', name: 'Solution', trim: false)]
-              properties([[$class: 'ParametersDefinitionProperty', parameterDefinitions: [[$class: 'StringParameterDefinition', name: 'myparam', defaultValue: 'default value']]]])
-              echo "received ${binding.hasVariable('myparam') ? myparam : 'undefined'}" 
+              properties([
+  	              parameters([
+  		              string(name: 'mybranch', defaultValue: 'undefined')
+  	              ])
+              ])
+              println "Hello from the shebang line"
+              println "####Printing parameter:"
+              echo "mybranch = ${mybranch}"
               echo "${params.Solution}"
               echo "${env.JOB_URL}"
               //bat '"C:\\ProgramData\\chocolatey\\lib\\NuGet.CommandLine\\tools\\nuget.exe" restore DancingGoat.sln'
