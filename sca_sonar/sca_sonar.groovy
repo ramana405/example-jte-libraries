@@ -9,11 +9,13 @@ stage('SCA_Sonar'){
             properties([
   	              parameters([
   		              string(name: 'Solution_file', defaultValue: 'undefined')
+                            string(name: 'Project_Name', defaultValue: 'undefined')
   	              ])
               ])
-            echo "${params.Solution_file}"  
+            echo "${params.Solution_file}" 
+            echo "${params.Project_Name}"  
             //sleep(5)  
-            /*bat '"C:\\ProgramData\\chocolatey\\bin\\SonarScanner.MSBuild.exe" begin /k:DancingGoat'
+            /*bat '"C:\\ProgramData\\chocolatey\\bin\\SonarScanner.MSBuild.exe" begin /k:${params.Project_Name}'
             bat '"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\MSBuild\\Current\\Bin\\MSBuild.exe" ${params.Solution_file} /t:Rebuild'
             bat '"C:\\ProgramData\\chocolatey\\bin\\SonarScanner.MSBuild.exe" end'*/
        }
