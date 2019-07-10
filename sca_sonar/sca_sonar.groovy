@@ -8,7 +8,7 @@ stage('SCA_Sonar'){
               //echo "${MYCONSTANT}"
             properties([
   	              parameters([
-  		              string(name: 'Solution_file', defaultValue: 'undefined')
+  		              string(name: 'Solution_file', defaultValue: 'undefined'),
                             string(name: 'Project_Name', defaultValue: 'undefined')
   	              ])
               ])
