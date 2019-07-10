@@ -8,7 +8,7 @@ stage('build') {
               echo "Code build is in progress"
               properties([
   	              parameters([
-  		              string(name: 'Solution_file', defaultValue: 'undefined')
+  		              string(name: 'Solution_file', defaultValue: 'undefined'),
                             string(name: 'Project_Name', defaultValue: 'undefined')
   	              ])
               ])
