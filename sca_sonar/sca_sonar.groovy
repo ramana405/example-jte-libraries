@@ -15,9 +15,9 @@ stage('SCA_Sonar'){
             echo "${params.Solution_file}" 
             echo "${params.Project_Name}"  
             //sleep(5)  
-            /*bat '"C:\\ProgramData\\chocolatey\\bin\\SonarScanner.MSBuild.exe" begin /k:${params.Project_Name}'
+            bat '"C:\\ProgramData\\chocolatey\\bin\\SonarScanner.MSBuild.exe" begin /k:${params.Project_Name}'
             bat '"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\MSBuild\\Current\\Bin\\MSBuild.exe" ${params.Solution_file} /t:Rebuild'
-            bat '"C:\\ProgramData\\chocolatey\\bin\\SonarScanner.MSBuild.exe" end'*/
+            bat '"C:\\ProgramData\\chocolatey\\bin\\SonarScanner.MSBuild.exe" end'
        }
 } 
 echo "Ending Static Code Analysis"
