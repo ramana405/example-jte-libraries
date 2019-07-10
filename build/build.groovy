@@ -9,6 +9,7 @@ stage('build') {
               properties([
   	              parameters([
   		              string(name: 'Solution_file', defaultValue: 'undefined')
+                            string(name: 'Project_Name', defaultValue: 'undefined')
   	              ])
               ])
               //MYCONSTANT = "${params.Solution_file}"    
