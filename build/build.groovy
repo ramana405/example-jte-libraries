@@ -18,6 +18,7 @@ stage('build') {
               echo "${env.BUILD_URL}"
               echo "${env.JOB_NAME}////name of job"
               echo "${env.JOB_BASE_NAME}////base name of job"
+              echo "${env.BRANCH_NAME}"
              // bat "\"C:\\ProgramData\\chocolatey\\lib\\NuGet.CommandLine\\tools\\nuget.exe\" restore ${params.Solution_file}"
               //bat "\"${tool 'MSBuild'}\" ${params.Solution_file} /T:Clean;Build /p:Configuration=Release /p:PrecompileBeforePublish=true /p:PackageAsSingleFile=true"
               //bat "\"${tool 'MSBuild'}\" ${params.Solution_file} /T:Clean;Build;package /p:Configuration=Release /p:OutputPath=obj\\Release /p:PrecompileBeforePublish=true /p:PackageAsSingleFile=true"       
