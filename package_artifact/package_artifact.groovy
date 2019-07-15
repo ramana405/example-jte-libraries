@@ -9,7 +9,7 @@ stage("Package"){
               properties([
   	              parameters([
                             string(name: 'Solution_file', defaultValue: 'undefined'),
-                            string(name: 'Project_Name', defaultValue: 'undefined')
+                            string(name: 'Project_Name1', defaultValue: 'undefined')
   	              ])
               ])
               //bat "\"${tool 'MSBuild'}\" ${params.Solution_file} /T:Clean;Build;package /p:Configuration=Release /p:OutputPath=obj\\Release /p:PrecompileBeforePublish=true /p:PackageAsSingleFile=true"
