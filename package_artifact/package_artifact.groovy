@@ -5,6 +5,7 @@ stage("Package"){
               echo "packaging the code is in progress.."
               echo "${env.JOB_BASE_NAME}"
               echo "${env.JOB_NAME}"
+              echo "${env.PROJECT_NAME}"
               properties([
   	              parameters([
                             string(name: 'Solution_file', defaultValue: 'undefined'),
